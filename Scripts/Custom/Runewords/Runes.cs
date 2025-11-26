@@ -40,8 +40,9 @@ namespace Bittiez.RuneWords
     }
     public abstract class Rune : Item
     {
+        protected const int HUE_OFFSET = 10;
         private double m_rarity = 100.0;
-
+        
         public double Rarity
         {
             get { return m_rarity; }
@@ -51,7 +52,8 @@ namespace Bittiez.RuneWords
         [Constructable]
         public Rune() : base(0x1F14)
         {
-            Hue = 923;
+            Hue = 600;
+            Stackable = true;
         }
         public Rune(Serial serial) : base(serial)
         {
@@ -104,13 +106,24 @@ namespace Bittiez.RuneWords
             list.Add("/c[gold]a magic rune/cd");
         }
 
+        public override bool OnDroppedOnto(Mobile from, Item target)
+        {
+            if (target.IsAccessibleTo(from) && target.WillStack(from, this))
+            {
+                target.Amount += Amount;
+                Consume(Amount);
+            }
+            
+            return base.OnDroppedOnto(from, target);
+        }
+
         public override void OnDoubleClick(Mobile from)
         {
             base.OnDoubleClick(from);
 
             if (!IsChildOf(from.Backpack))
             {
-                from.SendMessage("That must be in your posession!");
+                from.SendMessage("That must be in your possession!");
                 return;
             }
             from.SendMessage("What rune board would you like to etch this rune into?");
@@ -165,14 +178,32 @@ namespace Bittiez.RuneWords
                 if (runeBoard.IsChildOf(from.Backpack) || runeBoard.IsAccessibleTo(from))
                 {
                     runeBoard.addRune(m_Rune);
-                    m_Rune.Delete();
-                    from.SendMessage("You succesfully etched the rune into the board, destroying the rune in the process.");
+                    m_Rune.Consume(1);
+                    from.SendMessage("You successfully etched the rune into the board, destroying the rune in the process.");
                 }
                 else
                 {
                     from.SendMessage("You need to be able to access that rune board.");
                 }
                 return;
+            }
+
+            if (targeted is Rune rune)
+            {
+                if (rune == m_Rune)
+                {
+                    if (rune.Amount > 1 && rune.Parent is Container c)
+                    {
+                        rune.Consume();
+                        Type t = rune.GetType();
+                        c.AddItem((Item)(t.CreateInstance(null)));
+                    }
+                }
+                else if (rune.WillStack(from, m_Rune))
+                {
+                    rune.Amount += m_Rune.Amount;
+                    m_Rune.Consume(m_Rune.Amount);
+                }
             }
 
             from.SendMessage("You can't figure out a way to use this rune on that.");
@@ -186,6 +217,7 @@ namespace Bittiez.RuneWords
         {
             Name = "Fe";
             Weight = 0.5;
+            Hue += HUE_OFFSET;
         }
 
         public Fe(Serial serial) : base(serial)
@@ -208,6 +240,7 @@ namespace Bittiez.RuneWords
         {
             Name = "Ur";
             Weight = 0.5;
+            Hue += HUE_OFFSET * 2;
         }
 
         public Ur(Serial serial) : base(serial)
@@ -230,6 +263,7 @@ namespace Bittiez.RuneWords
         {
             Name = "Purs";
             Weight = 0.5;
+            Hue += HUE_OFFSET * 3;
         }
 
         public Purs(Serial serial) : base(serial)
@@ -252,6 +286,7 @@ namespace Bittiez.RuneWords
         {
             Name = "Os";
             Weight = 0.5;
+            Hue += HUE_OFFSET * 4;
         }
 
         public Os(Serial serial) : base(serial)
@@ -274,6 +309,7 @@ namespace Bittiez.RuneWords
         {
             Name = "Reio";
             Weight = 0.5;
+            Hue += HUE_OFFSET * 5;
         }
 
         public Reio(Serial serial) : base(serial)
@@ -296,6 +332,7 @@ namespace Bittiez.RuneWords
         {
             Name = "Kaun";
             Weight = 0.5;
+            Hue += HUE_OFFSET * 6;
         }
 
         public Kaun(Serial serial) : base(serial)
@@ -318,6 +355,7 @@ namespace Bittiez.RuneWords
         {
             Name = "Hagal";
             Weight = 0.5;
+            Hue += HUE_OFFSET * 7;
         }
 
         public Hagal(Serial serial) : base(serial)
@@ -340,6 +378,7 @@ namespace Bittiez.RuneWords
         {
             Name = "Nauo";
             Weight = 0.5;
+            Hue += HUE_OFFSET * 8;
         }
 
         public Nauo(Serial serial) : base(serial)
@@ -362,6 +401,7 @@ namespace Bittiez.RuneWords
         {
             Name = "Is";
             Weight = 0.5;
+            Hue += HUE_OFFSET * 9;
         }
 
         public Is(Serial serial) : base(serial)
@@ -384,6 +424,7 @@ namespace Bittiez.RuneWords
         {
             Name = "Ar";
             Weight = 0.5;
+            Hue += HUE_OFFSET * 10;
         }
 
         public Ar(Serial serial) : base(serial)
@@ -406,6 +447,7 @@ namespace Bittiez.RuneWords
         {
             Name = "Sol";
             Weight = 0.5;
+            Hue += HUE_OFFSET * 11;
         }
 
         public Sol(Serial serial) : base(serial)
@@ -428,6 +470,7 @@ namespace Bittiez.RuneWords
         {
             Name = "Tyr";
             Weight = 0.5;
+            Hue += HUE_OFFSET * 12;
         }
 
         public Tyr(Serial serial) : base(serial)
@@ -450,6 +493,7 @@ namespace Bittiez.RuneWords
         {
             Name = "Bjarka";
             Weight = 0.5;
+            Hue += HUE_OFFSET * 13;
         }
 
         public Bjarka(Serial serial) : base(serial)
@@ -472,6 +516,7 @@ namespace Bittiez.RuneWords
         {
             Name = "Maoer";
             Weight = 0.5;
+            Hue += HUE_OFFSET * 14;
         }
 
         public Maoer(Serial serial) : base(serial)
@@ -494,6 +539,7 @@ namespace Bittiez.RuneWords
         {
             Name = "Logur";
             Weight = 0.5;
+            Hue += HUE_OFFSET * 15;
         }
 
         public Logur(Serial serial) : base(serial)
@@ -516,6 +562,7 @@ namespace Bittiez.RuneWords
         {
             Name = "Yr";
             Weight = 0.5;
+            Hue += HUE_OFFSET * 16;
         }
 
         public Yr(Serial serial) : base(serial)

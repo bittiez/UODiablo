@@ -345,6 +345,8 @@ namespace Server.Spells
         /// <returns></returns>
         public virtual bool CheckMovement(Mobile caster)
         {
+	        if (caster.AccessLevel > AccessLevel.VIP) return true;
+	        
             if (IsCasting && BlocksMovement && (!(m_Caster is BaseCreature) || ((BaseCreature)m_Caster).FreezeOnCast))
             {
                 return false;
@@ -357,6 +359,8 @@ namespace Server.Spells
 		{
             if (IsCasting)
 			{
+				if (Caster.AccessLevel > AccessLevel.VIP) return true;
+				
                 if ((item.Layer == Layer.OneHanded || item.Layer == Layer.TwoHanded) && item.AllowEquipedCast(Caster))
                 {
                     return true;
@@ -370,6 +374,8 @@ namespace Server.Spells
 
 		public virtual bool OnCasterUsingObject(object o)
 		{
+			if (Caster.AccessLevel > AccessLevel.VIP) return true;
+			
 			if (m_State == SpellState.Sequencing)
 			{
 				Disturb(DisturbType.UseRequest);
@@ -380,11 +386,15 @@ namespace Server.Spells
 
 		public virtual bool OnCastInTown(Region r)
 		{
+			if (Caster.AccessLevel > AccessLevel.VIP) return true;
+			
 			return m_Info.AllowTown;
 		}
 
 		public virtual bool ConsumeReagents()
 		{
+			if (Caster.AccessLevel > AccessLevel.VIP) return true;
+			
             if ((m_Scroll != null && !(m_Scroll is SpellStone)) || !m_Caster.Player)
             {
 				return true;
@@ -735,7 +745,8 @@ namespace Server.Spells
 			{
 				return false;
 			}
-			else if (m_Caster is PlayerMobile && ((PlayerMobile)m_Caster).Peaced)
+			
+			if (m_Caster is PlayerMobile && ((PlayerMobile)m_Caster).Peaced)
 			{
 				m_Caster.SendLocalizedMessage(1072060); // You cannot cast a spell while calmed.
 			}

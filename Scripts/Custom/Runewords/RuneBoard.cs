@@ -47,6 +47,13 @@ namespace Bittiez.RuneWords
         public override void OnDoubleClick(Mobile from)
         {
             base.OnDoubleClick(from);
+
+            if (Runes.IsNullOrEmpty())
+            {
+                from.SendMessage("There are no engraved runes on this.");
+                return;
+            }
+            
             from.SendMessage("What would you like to attempt to apply this rune word to?");
             from.Target = new RuneBoardTarget(this);
         }

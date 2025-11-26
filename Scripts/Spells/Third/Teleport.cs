@@ -23,6 +23,11 @@ namespace Server.Spells.Third
             return TimeSpan.Zero;
         }
 
+        public override TimeSpan GetCastRecovery()
+        {
+            return TimeSpan.Zero;
+        }
+
         public override SpellCircle Circle
         {
             get
