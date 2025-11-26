@@ -170,3 +170,4 @@ Configuration files in `/Config/` control server behavior (20+ .cfg files):
 ## CI/CD
 
 Travis CI configuration (`.travis.yml`) provides automated builds using latest Mono compiler.
+- Make sure to add files in script to the csproj to compile

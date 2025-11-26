@@ -162,6 +162,26 @@ namespace Server
 		{
 			Add(GetStringNumber(), String.Format(format, args));
 		}
+
+		public void Reset()
+		{
+			// Reset state variables
+			m_Hash = 0;
+			m_Header = 0;
+			m_HeaderArgs = null;
+			m_Strings = 0;
+
+			// Create new stream and reinitialize
+			m_Stream = new PacketWriter();
+			EnsureCapacity(128);
+
+			// Rewrite initial packet data
+			m_Stream.Write((short)1);
+			m_Stream.Write(m_Entity.Serial);
+			m_Stream.Write((byte)0);
+			m_Stream.Write((byte)0);
+			m_Stream.Write(m_Entity.Serial);
+		}
 	}
 
 	public sealed class OPLInfo : Packet

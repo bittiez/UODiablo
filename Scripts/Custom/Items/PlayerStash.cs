@@ -36,16 +36,11 @@ namespace Server.Custom.Items
 
             if (AccountGold.Enabled && from.Account is Account)
             {
-                from.SendLocalizedMessage(1155855, String.Format("{0:#,0}\t{1:#,0}",
-                    from.Account.TotalPlat,
-                    from.Account.TotalGold), 0x3BC);
-
-                from.SendLocalizedMessage(1155848, String.Format("{0:#,0}", ((Account)from.Account).GetSecureAccountAmount(from)), 0x3BC);
+                from.SendMessage(0x3BC, $"Your stash holds {from.Account.TotalGold} gold and {from.Account.TotalPlat} platinum.");
             }
             else
             {
-                // Thy current bank balance is ~1_AMOUNT~ gold.
-                from.SendLocalizedMessage(1042759, Banker.GetBalance(from).ToString("#,0"));
+                from.SendMessage(0x3BC, $"Your stash holds {Banker.GetBalance(from)} gold.");
             }
         }
 

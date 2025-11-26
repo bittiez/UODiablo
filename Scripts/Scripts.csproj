@@ -343,6 +343,7 @@
     <Compile Include="Custom\Mobiles\Fallen\CarverShaman.cs" />
     <Compile Include="Custom\Mobiles\Fallen\Fallen.cs" />
     <Compile Include="Custom\Mobiles\Fallen\FallenShamen.cs" />
+    <Compile Include="Custom\Mobiles\Gheed.cs" />
     <Compile Include="Custom\Mobiles\Griswold.cs" />
     <Compile Include="Custom\Mobiles\KhazraClan\MoonClan.cs" />
     <Compile Include="Custom\Mobiles\KhazraClan\NightClan.cs" />

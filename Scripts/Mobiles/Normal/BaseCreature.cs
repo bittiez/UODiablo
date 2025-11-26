@@ -361,11 +361,13 @@ namespace Server.Mobiles
         }
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public int MonsterLevelNormal { get; set; }
+        public int MonsterLevelNormal { get; set; } = 0;
+
         [CommandProperty(AccessLevel.GameMaster)]
-        public int MonsterLevelNightmare { get; set; }
+        public int MonsterLevelNightmare { get; set; } = 0;
+
         [CommandProperty(AccessLevel.GameMaster)]
-        public int MonsterLevelHell { get; set; }
+        public int MonsterLevelHell { get; set; } = 0;
 
         private const double LevelStatModifier = 0.4;
 
@@ -2681,6 +2683,8 @@ namespace Server.Mobiles
 
             switch (version)
             {
+                case 31:
+                    goto case 30;
                 case 30:
                     goto case 29;
                 case 29:
