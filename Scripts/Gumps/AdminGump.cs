@@ -377,6 +377,8 @@ namespace Server.Gumps
                         this.AddButtonLabeled(20, 150, this.GetButtonID(3, 101), "Create World");
                         this.AddButtonLabeled(20, 175, this.GetButtonID(3, 102), "Delete World");
                         this.AddButtonLabeled(20, 200, this.GetButtonID(3, 103), "Recreate World");
+                        
+                        this.AddButtonLabeled(220, 150, this.GetButtonID(3, 104), "Save Spawners");
 
                         this.AddHtml(20, 275, 400, 30, this.Color(this.Center("Statics"), LabelColor32), false, false);
 
@@ -1832,6 +1834,10 @@ namespace Server.Gumps
                             case 103:
                                 this.InvokeCommand("RecreateWorld nogump");
                                 notice = "The world has been recreated.";
+                                break;
+                            case 104:
+                                this.InvokeCommand("xmldiablosave");
+                                notice = "Saving all spawns...";
                                 break;
                             case 110:
                                 this.InvokeCommand("Freeze");

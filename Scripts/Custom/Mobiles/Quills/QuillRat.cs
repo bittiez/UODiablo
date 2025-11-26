@@ -1,7 +1,7 @@
 using Server.Items;
 using Server.Mobiles;
 
-namespace Server.Custom.Mobiles
+namespace Server.Mobiles
 {
     internal class QuillRat : BaseCreature
     {

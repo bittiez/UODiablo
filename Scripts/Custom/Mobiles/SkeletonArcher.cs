@@ -3,23 +3,23 @@ using System;
 
 namespace Server.Mobiles
 {
-    public class DarkArcher : BaseCreature
+    public class SkeletonArcher : BaseCreature
     {
         [Constructable]
-        public DarkArcher()
+        public SkeletonArcher()
             : base(AIType.AI_Archer, FightMode.Closest, 10, 8, 0.2, 0.4)
         {
-            Name = "dark archer";
-            Body = 0x191;
-            Female = true;
+            Name = "skeleton archer";
+            Body = Utility.RandomList(50, 56);
+            BaseSoundID = 0x48D;
 
-            MonsterLevel = 7;
+            MonsterLevel = 3;
 
             SetStr(50, 65);
             SetDex(80, 95);
             SetInt(60, 75);
 
-            SetDamage(6, 10);
+            SetDamage(1, 2);
 
             SetSkill(SkillName.MagicResist, 25.0, 47.5);
             SetSkill(SkillName.Archery, 35.0, 60.5);
@@ -35,10 +35,6 @@ namespace Server.Mobiles
             Fame = 500;
             Karma = -500;
 
-            SetWearable(new ThighBoots(), Utility.RandomNeutralHue(), dropChance: 1);
-            SetWearable(new FemaleStuddedChest(), dropChance: 1);
-            SetWearable(new OrcHelm(), dropChance: 1);
-
             SetWearable((Item)Activator.CreateInstance(Utility.RandomList(_WeaponsList)), dropChance: 1);
 
             Utility.AssignRandomHair(this);
@@ -46,13 +42,13 @@ namespace Server.Mobiles
             PackItem(new Arrow(Utility.Random(40)));
         }
 
-        public DarkArcher(Serial serial)
+        public SkeletonArcher(Serial serial)
             : base(serial)
         {
         }
 
         public override bool ClickTitle => false;
-        public override bool AlwaysMurderer => true;
+        public override bool AlwaysMurderer => false;
 
         public override bool ShowFameTitle => false;
 
@@ -60,11 +56,6 @@ namespace Server.Mobiles
         {
             typeof(Bow), typeof(CompositeBow)
         };
-
-        //public override void GenerateLoot()
-        //{
-        //    AddLoot(LootPack.Average);
-        //}
 
         public override void Serialize(GenericWriter writer)
         {

@@ -159,7 +159,7 @@ namespace Server
 				assembly = null;
 				return true;
 			}
-
+			
 			if (File.Exists("Scripts/Output/Scripts.CS.dll"))
 			{
 				if (cache && File.Exists("Scripts/Output/Scripts.CS.hash"))
@@ -210,8 +210,9 @@ namespace Server
 					{ }
 				}
 			}
-
+			
 			DeleteFiles("Scripts.CS*.dll");
+			
 
 #if !MONO
             using (CodeDomProvider provider = new Microsoft.CodeDom.Providers.DotNetCompilerPlatform.CSharpCodeProvider())
@@ -238,7 +239,7 @@ namespace Server
 				if (Core.Unix)
                 {
 					parms.CompilerOptions = String.Format( "{0} /nowarn:169,219,414 /recurse:Scripts/*.cs", parms.CompilerOptions );
-                    files = new string[0];
+                    files = Array.Empty<string>();
                 }
                 
 				var results = provider.CompileAssemblyFromFile(parms, files);

@@ -3707,6 +3707,10 @@ namespace Server.Mobiles
             CommandSystem.Register("XmlNewLoadHere", DiskAccessLevel, new CommandEventHandler(NewLoadHere_OnCommand));
             CommandSystem.Register("XmlSave", DiskAccessLevel, new CommandEventHandler(Save_OnCommand));
             CommandSystem.Register("XmlSaveAll", DiskAccessLevel, new CommandEventHandler(SaveAll_OnCommand));
+            
+            ///Special command to make saving for UODiablo simpler, harder to mess up
+            CommandSystem.Register("xmldiablosave", DiskAccessLevel, new CommandEventHandler(SaveAllDiablo_OnCommand));
+            
             CommandSystem.Register("XmlSaveOld", DiskAccessLevel, new CommandEventHandler(SaveOld_OnCommand));
             CommandSystem.Register("XmlImportSpawners", DiskAccessLevel, new CommandEventHandler(XmlImportSpawners_OnCommand));
             CommandSystem.Register("XmlImportMSF", DiskAccessLevel, new CommandEventHandler(XmlImportMSF_OnCommand));
@@ -7142,6 +7146,13 @@ namespace Server.Mobiles
         {
             SaveSpawns(e, true, false);
         }
+        
+        [Usage("xmldiablosave <SpawnFile> [SpawnerPrefixFilter]")]
+        [Description("Saves ALL XmlSpawner objects from the entire world into the file supplied.")]
+        public static void SaveAllDiablo_OnCommand(CommandEventArgs e)
+        {
+            DiabloSaveSpawns(e.Mobile);
+        }
 
         public class XmlSaveSingle : BaseCommand
         {
@@ -7210,6 +7221,33 @@ namespace Server.Mobiles
             SaveSpawnList(m, saveslist, dirname, false, true);
         }
 
+        private static void DiabloSaveSpawns(Mobile from)
+        {
+            string dirname = "Spawns";
+            
+            foreach (var map in Server.Map.AllMaps)
+            {
+                string finalPath = Path.Combine(dirname, $"map_{map.MapIndex}.xml");
+
+                List<XmlSpawner> saveslist = new List<XmlSpawner>();
+
+                // Add each spawn point to the list
+                foreach (Item i in World.Items.Values)
+                {
+                    if (i is XmlSpawner && !i.Deleted && i.Map == map && !(i.RootParent is Mobile))
+                    {
+                        saveslist.Add((XmlSpawner)i);
+                    }
+                }
+
+                if (saveslist.IsNullOrEmpty()) continue;
+                
+                from.SendMessage($"Saving {saveslist.Count} spawners from {map.Name} to {finalPath}.");
+                
+                SaveSpawnList(from, saveslist, finalPath, false, false);
+            }
+        }
+        
         private static void SaveSpawns(CommandEventArgs e, bool SaveAllMaps, bool oldformat)
         {
             if (e == null || e.Mobile == null || e.Arguments == null || e.Arguments.Length < 1) return;

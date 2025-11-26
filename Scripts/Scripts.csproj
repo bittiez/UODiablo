@@ -330,9 +330,11 @@
     <Compile Include="Custom\Mobiles\BoneBreaker.cs" />
     <Compile Include="Custom\Mobiles\Champs\Andarial.cs" />
     <Compile Include="Custom\Mobiles\CorpseFire.cs" />
-    <Compile Include="Custom\Mobiles\CorruptRogue.cs" />
-    <Compile Include="Custom\Mobiles\CorruptRogueArcher.cs" />
-    <Compile Include="Custom\Mobiles\CorruptRogueSpear.cs" />
+    <Compile Include="Custom\Mobiles\CorruptRogue\DarkArcher.cs" />
+    <Compile Include="Custom\Mobiles\CorruptRogue\DarkHunter.cs" />
+    <Compile Include="Custom\Mobiles\CorruptRogue\DarkSpearWoman.cs" />
+    <Compile Include="Custom\Mobiles\CorruptRogue\VileHunter.cs" />
+    <Compile Include="Custom\Mobiles\CorruptRogue\VileLancer.cs" />
     <Compile Include="Custom\Mobiles\Fallen.cs" />
     <Compile Include="Custom\Mobiles\FallenShamen.cs" />
     <Compile Include="Custom\Mobiles\FoulCrow.cs" />
@@ -340,7 +342,9 @@
     <Compile Include="Custom\Mobiles\Griswold.cs" />
     <Compile Include="Custom\Mobiles\MoonClan.cs" />
     <Compile Include="Custom\Mobiles\NPC\Akara.cs" />
-    <Compile Include="Custom\Mobiles\QuillRat.cs" />
+    <Compile Include="Custom\Mobiles\Quills\QuillRat.cs" />
+    <Compile Include="Custom\Mobiles\Quills\SpikeFiend.cs" />
+    <Compile Include="Custom\Mobiles\SkeletonArcher.cs" />
     <Compile Include="Custom\Mobiles\SummonedSkeleton.cs" />
     <Compile Include="Custom\Mobiles\SummonedSkeletonMage.cs" />
     <Compile Include="Custom\Mobiles\Tainted.cs" />
