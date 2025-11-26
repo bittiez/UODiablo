@@ -15,8 +15,10 @@ namespace Server.Mobiles
             Female = true;
             Hue = 50;
 
-            MonsterLevel = 5;
-
+            MonsterLevelNormal = 5;
+            MonsterLevelNightmare = 38;
+            MonsterLevelHell = 68;
+            
             SetStr(60, 75);
             SetDex(80, 95);
             SetInt(60, 75);
@@ -39,14 +41,9 @@ namespace Server.Mobiles
             Fame = 500;
             Karma = -500;
 
-            if(RandomImpl.NextDouble() < 0.33)
-                SetWearable(new ThighBoots(), Utility.RandomNeutralHue(), dropChance: 0.3);
-            
-            if(RandomImpl.NextDouble() < 0.33)
-                SetWearable(new FemaleStuddedChest(), dropChance: 0.3);
-            
-            if(RandomImpl.NextDouble() < 0.33)
-                SetWearable(new OrcHelm(), dropChance: 1);
+            SetWearable(new ThighBoots(), Utility.RandomNeutralHue(), dropChance: 0.3);
+            SetWearable(new FemaleStuddedChest(), dropChance: 0.3);
+            SetWearable(new OrcHelm(), dropChance: 1);
 
             SetWearable((Item)Activator.CreateInstance(Utility.RandomList(_WeaponsList)), dropChance: 1);
 

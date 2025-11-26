@@ -121,7 +121,7 @@ namespace Server.Engines.CannedEvil
                  : new Type[] { typeof(Ghoul), typeof(Shade), typeof(Spectre), typeof(Wraith) }), // Level 1
 
                 new Type[] { typeof(BoneMagi), typeof(Mummy), typeof(SkeletalMage) }, // Level 2
-                new Type[] { typeof(BoneKnight), typeof(Lich), typeof(SkeletalKnight) }, // Level 3
+                new Type[] { typeof(BoneKnight), typeof(Banished), typeof(SkeletalKnight) }, // Level 3
                 new Type[] { typeof(LichLord), typeof(RottingCorpse) }// Level 4
             }),
             new ChampionSpawnInfo("Sleeping Dragon", typeof(Serado), new string[] { "Rival", "Challenger", "Antagonist" }, new Type[][]

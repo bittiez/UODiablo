@@ -163,7 +163,7 @@ namespace Server
 				new[]
 				{
 					typeof(LordOaks), typeof(Silvani), typeof(AirElemental), typeof(AncientWyrm), typeof(Balron), typeof(BladeSpirits),
-					typeof(DreadSpider), typeof(Efreet), typeof(EtherealWarrior), typeof(Lich), typeof(Nightmare),
+					typeof(DreadSpider), typeof(Efreet), typeof(EtherealWarrior), typeof(Banished), typeof(Nightmare),
 					typeof(OphidianArchmage), typeof(OphidianMage), typeof(OphidianWarrior), typeof(OphidianMatriarch),
 					typeof(OphidianKnight), typeof(PoisonElemental), typeof(Revenant), typeof(SandVortex), typeof(SavageRider),
 					typeof(SavageShaman), typeof(SnowElemental), typeof(WhiteWyrm), typeof(Wisp), typeof(DemonKnight),

@@ -14,7 +14,7 @@ namespace Server.Items
 
             #region Undead
             typeof(Skeleton), typeof(SkeletalKnight), typeof(SkeletalMage), typeof(Mummy),
-            typeof(BoneKnight), typeof(Lich), typeof(LichLord), typeof(BoneMagi),
+            typeof(BoneKnight), typeof(Banished), typeof(LichLord), typeof(BoneMagi),
             typeof(Wraith), typeof(Shade), typeof(Spectre), typeof(Zombie),
             typeof(RottingCorpse), typeof(Ghoul),
             #endregion

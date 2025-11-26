@@ -149,7 +149,7 @@ namespace Server.Spells.Necromancy
                {
                    new SummonEntry(18000, typeof(SkeletalDragon)),
                    new SummonEntry(10000, typeof(FleshGolem)),
-                   new SummonEntry(5000, typeof(Lich)),
+                   new SummonEntry(5000, typeof(Banished)),
                    new SummonEntry(3000, typeof(SkeletalKnight), typeof(BoneKnight)),
                    new SummonEntry(2000, typeof(Mummy)),
                    new SummonEntry(1000, typeof(SkeletalMage), typeof(BoneMagi)),
@@ -160,7 +160,7 @@ namespace Server.Spells.Necromancy
             {
                 new SummonEntry(18000, typeof(LichLord)),
                 new SummonEntry(10000, typeof(FleshGolem)),
-                new SummonEntry(5000, typeof(Lich)),
+                new SummonEntry(5000, typeof(Banished)),
                 new SummonEntry(3000, typeof(SkeletalKnight), typeof(BoneKnight)),
                 new SummonEntry(2000, typeof(Mummy)),
                 new SummonEntry(1000, typeof(SkeletalMage), typeof(BoneMagi)),

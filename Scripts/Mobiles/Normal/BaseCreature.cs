@@ -347,16 +347,25 @@ namespace Server.Mobiles
         {
             get
             {
+                if (monsterLevel > 0) return monsterLevel;
+                
                 if (Map != null && Map == Map.Nightmare || Map == Map.DungeonsNightmare)
-                    return monsterLevel * 3;
+                    return MonsterLevelNightmare;
 
-                if (Map != null && Map == Map.Nightmare || Map == Map.DungeonsNightmare)
-                    return monsterLevel * 6;
+                if (Map != null && Map == Map.Hell || Map == Map.DungeonsHell)
+                    return MonsterLevelHell;
 
-                return monsterLevel;
+                return MonsterLevelNormal;
             }
             set => monsterLevel = value;
         }
+
+        [CommandProperty(AccessLevel.GameMaster)]
+        public int MonsterLevelNormal { get; set; }
+        [CommandProperty(AccessLevel.GameMaster)]
+        public int MonsterLevelNightmare { get; set; }
+        [CommandProperty(AccessLevel.GameMaster)]
+        public int MonsterLevelHell { get; set; }
 
         private const double LevelStatModifier = 0.4;
 
@@ -1638,7 +1647,7 @@ namespace Server.Mobiles
         private static readonly Type[] m_AnimateDeadTypes = new[]
         {
             typeof(MoundOfMaggots), typeof(HellSteed), typeof(SkeletalMount), typeof(WailingBanshee), typeof(Wraith),
-            typeof(SkeletalDragon), typeof(LichLord), typeof(FleshGolem), typeof(Lich), typeof(SkeletalKnight),
+            typeof(SkeletalDragon), typeof(LichLord), typeof(FleshGolem), typeof(Banished), typeof(SkeletalKnight),
             typeof(BoneKnight), typeof(Mummy), typeof(SkeletalMage), typeof(BoneMagi), typeof(PatchworkSkeleton)
         };
 
@@ -2477,7 +2486,7 @@ namespace Server.Mobiles
         {
             base.Serialize(writer);
 
-            writer.Write(30); // version
+            writer.Write(31); // version
 
             writer.Write(IsSoulbound);
 
@@ -2653,6 +2662,11 @@ namespace Server.Mobiles
 
             //Version 30
             writer.Write(monsterLevel);
+            
+            //Version 31
+            writer.Write(MonsterLevelNormal);
+            writer.Write(MonsterLevelNightmare);
+            writer.Write(MonsterLevelHell);
         }
 
         private static readonly double[] m_StandardActiveSpeeds = new[] { 0.175, 0.1, 0.15, 0.2, 0.25, 0.3, 0.4, 0.5, 0.6, 0.8 };
@@ -3034,7 +3048,14 @@ namespace Server.Mobiles
 
             if (version >= 30)
             {
-                MonsterLevel = reader.ReadInt();
+                monsterLevel = reader.ReadInt();
+            }
+
+            if (version >= 31)
+            {
+                MonsterLevelNormal = reader.ReadInt();
+                MonsterLevelNightmare = reader.ReadInt();
+                MonsterLevelHell = reader.ReadInt();
             }
 
             #region after load adjustments

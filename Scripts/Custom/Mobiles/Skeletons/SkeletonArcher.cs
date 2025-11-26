@@ -1,5 +1,5 @@
-using Server.Items;
 using System;
+using Server.Items;
 
 namespace Server.Mobiles
 {
@@ -13,8 +13,10 @@ namespace Server.Mobiles
             Body = Utility.RandomList(50, 56);
             BaseSoundID = 0x48D;
 
-            MonsterLevel = 3;
-
+            MonsterLevelNormal = 5;
+            MonsterLevelNightmare = 38;
+            MonsterLevelHell = 68;
+            
             SetStr(50, 65);
             SetDex(80, 95);
             SetInt(60, 75);

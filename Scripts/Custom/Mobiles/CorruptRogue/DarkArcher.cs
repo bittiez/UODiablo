@@ -14,8 +14,10 @@ namespace Server.Mobiles
             Body = 0x191;
             Female = true;
 
-            MonsterLevel = 7;
-
+            MonsterLevelNormal = 7;
+            MonsterLevelNightmare = 38;
+            MonsterLevelHell = 83;
+            
             SetStr(50, 65);
             SetDex(80, 95);
             SetInt(60, 75);

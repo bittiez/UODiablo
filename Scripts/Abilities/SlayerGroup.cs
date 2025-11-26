@@ -38,7 +38,7 @@ namespace Server.Items
 
             humanoid.FoundOn = new Type[]
                 {
-                    typeof(BoneKnight),     typeof(Lich),
+                    typeof(BoneKnight),     typeof(Banished),
                     typeof(LichLord)
                 };
 
@@ -126,7 +126,7 @@ namespace Server.Items
                     typeof(DarknightCreeper), typeof(FleshGolem),
                     typeof(Ghoul), typeof(GoreFiend),
                     typeof(HellSteed), typeof(LadyOfTheSnow),
-                    typeof(Lich), typeof(LichLord),
+                    typeof(Banished), typeof(LichLord),
                     typeof(Mummy), typeof(PestilentBandage),
                     typeof(Revenant), typeof(RevenantLion),
                     typeof(RottingCorpse), typeof(Shade),

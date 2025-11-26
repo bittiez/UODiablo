@@ -12,8 +12,10 @@ namespace Server.Mobiles
             BaseSoundID = 451;
             Hue = 1209;
 
-            MonsterLevel = 5;
-
+            MonsterLevelNormal = 5;
+            MonsterLevelNightmare = 40;
+            MonsterLevelHell = 86;
+            
             SetStr(200, 250);
             SetDex(75, 95);
             SetInt(40, 60);

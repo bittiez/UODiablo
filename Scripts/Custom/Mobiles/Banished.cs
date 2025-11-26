@@ -2,15 +2,17 @@ using Server.Items;
 
 namespace Server.Mobiles
 {
-    [CorpseName("a liche's corpse")]
-    public class Lich : BaseCreature
+    [CorpseName("a banished's corpse")]
+    public class Banished : BaseCreature
     {
         [Constructable]
-        public Lich()
+        public Banished()
             : base(AIType.AI_NecroMage, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
             Name = "banished";
-            MonsterLevel = 12;
+            MonsterLevelNormal = 12;
+            MonsterLevelNightmare = 43;
+            MonsterLevelHell = 73;  
             Body = 24;
             BaseSoundID = 0x3E9;
 
@@ -60,7 +62,7 @@ namespace Server.Mobiles
             PackNecroReg(17, 24);
         }
 
-        public Lich(Serial serial)
+        public Banished(Serial serial)
             : base(serial)
         {
         }

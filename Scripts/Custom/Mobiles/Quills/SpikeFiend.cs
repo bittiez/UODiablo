@@ -12,8 +12,10 @@ namespace Server.Mobiles
             Body = 0x20;
             Hue = 50;
 
-            MonsterLevel = 5;
-
+            MonsterLevelNormal = 5;
+            MonsterLevelNightmare = 38;
+            MonsterLevelHell = 68;
+            
             SetStr(20, 50);
             SetDex(50, 75);
             SetInt(10, 30);

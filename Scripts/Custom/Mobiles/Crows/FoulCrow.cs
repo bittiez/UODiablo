@@ -17,8 +17,10 @@ namespace Server.Custom.Mobiles
             Body = 5;
             BaseSoundID = 0x2EE;
 
-            MonsterLevel = 4;
-
+            MonsterLevelNormal = 4;
+            MonsterLevelNightmare = 37;
+            MonsterLevelHell = 68;
+            
             SetStr(16, 30);
             SetDex(26, 38);
             SetInt(6, 14);

@@ -12,8 +12,10 @@ namespace Server.Custom.Mobiles
             Name = "griswold";
             Body = 994;
 
-            MonsterLevel = 5;
-
+            MonsterLevelNormal = 5;
+            MonsterLevelNightmare = 39;
+            MonsterLevelHell = 84;
+            
             SetStr(65, 85);
             SetDex(50, 80);
             SetInt(20, 30);
@@ -21,7 +23,7 @@ namespace Server.Custom.Mobiles
             SetHits(500);
             SetStam(85, 100);
 
-            SetDamage(5, 10);
+            SetDamage(2, 6);
 
             SetDamageType(ResistanceType.Physical, 25);
             SetDamageType(ResistanceType.Fire, 50);

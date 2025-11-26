@@ -13,7 +13,10 @@ namespace Server.Mobiles
             Name = "vile hunter";
             Body = 0x191;
 
-            MonsterLevel = 5;
+            MonsterLevelNormal = 5;
+            MonsterLevelNightmare = 38;
+            MonsterLevelHell = 68;
+            
             Hue = 50;
 
             SetStr(60, 75);
@@ -38,12 +41,9 @@ namespace Server.Mobiles
             Fame = 500;
             Karma = -500;
 
-            if(RandomImpl.NextDouble() < 0.33)
-                SetWearable(new ThighBoots(), Utility.RandomNeutralHue(), dropChance: 1);
-            if(RandomImpl.NextDouble() < 0.33)
-                SetWearable(new FemaleStuddedChest(), dropChance: 1);
-            if(RandomImpl.NextDouble() < 0.33)
-                SetWearable(new Buckler(), dropChance: 1);
+            SetWearable(new ThighBoots(), Utility.RandomNeutralHue(), dropChance: 1);
+            SetWearable(new FemaleStuddedChest(), dropChance: 1);
+            SetWearable(new Buckler(), dropChance: 1);
 
             SetWearable((Item)Activator.CreateInstance(Utility.RandomList(_WeaponsList)), dropChance: 1);
 

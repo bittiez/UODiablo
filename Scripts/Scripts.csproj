@@ -325,26 +325,32 @@
     <Compile Include="Custom\Items\TravelWaypoint.cs" />
     <Compile Include="Custom\Items\WayPointScroll.cs" />
     <Compile Include="Custom\Items\WingedGreatHelm.cs" />
-    <Compile Include="Custom\Mobiles\BloodHawk.cs" />
     <Compile Include="Custom\Mobiles\BloodRaven.cs" />
     <Compile Include="Custom\Mobiles\BoneBreaker.cs" />
+    <Compile Include="Custom\Mobiles\Brutes\Brute.cs" />
+    <Compile Include="Custom\Mobiles\Brutes\GargantuanBeast.cs" />
     <Compile Include="Custom\Mobiles\Champs\Andarial.cs" />
     <Compile Include="Custom\Mobiles\CorpseFire.cs" />
     <Compile Include="Custom\Mobiles\CorruptRogue\DarkArcher.cs" />
     <Compile Include="Custom\Mobiles\CorruptRogue\DarkHunter.cs" />
     <Compile Include="Custom\Mobiles\CorruptRogue\DarkSpearWoman.cs" />
+    <Compile Include="Custom\Mobiles\CorruptRogue\VileArcher.cs" />
     <Compile Include="Custom\Mobiles\CorruptRogue\VileHunter.cs" />
     <Compile Include="Custom\Mobiles\CorruptRogue\VileLancer.cs" />
-    <Compile Include="Custom\Mobiles\Fallen.cs" />
-    <Compile Include="Custom\Mobiles\FallenShamen.cs" />
-    <Compile Include="Custom\Mobiles\FoulCrow.cs" />
-    <Compile Include="Custom\Mobiles\GargantuanBeast.cs" />
+    <Compile Include="Custom\Mobiles\Crows\BloodHawk.cs" />
+    <Compile Include="Custom\Mobiles\Crows\FoulCrow.cs" />
+    <Compile Include="Custom\Mobiles\Fallen\Carver.cs" />
+    <Compile Include="Custom\Mobiles\Fallen\CarverShaman.cs" />
+    <Compile Include="Custom\Mobiles\Fallen\Fallen.cs" />
+    <Compile Include="Custom\Mobiles\Fallen\FallenShamen.cs" />
     <Compile Include="Custom\Mobiles\Griswold.cs" />
-    <Compile Include="Custom\Mobiles\MoonClan.cs" />
+    <Compile Include="Custom\Mobiles\KhazraClan\MoonClan.cs" />
+    <Compile Include="Custom\Mobiles\KhazraClan\NightClan.cs" />
     <Compile Include="Custom\Mobiles\NPC\Akara.cs" />
     <Compile Include="Custom\Mobiles\Quills\QuillRat.cs" />
     <Compile Include="Custom\Mobiles\Quills\SpikeFiend.cs" />
-    <Compile Include="Custom\Mobiles\SkeletonArcher.cs" />
+    <Compile Include="Custom\Mobiles\Skeletons\Returned.cs" />
+    <Compile Include="Custom\Mobiles\Skeletons\SkeletonArcher.cs" />
     <Compile Include="Custom\Mobiles\SummonedSkeleton.cs" />
     <Compile Include="Custom\Mobiles\SummonedSkeletonMage.cs" />
     <Compile Include="Custom\Mobiles\Tainted.cs" />
@@ -2544,7 +2550,7 @@
     <Compile Include="Mobiles\Normal\LeatherWolf.cs" />
     <Compile Include="Mobiles\Normal\LesserHiryu.cs" />
     <Compile Include="Mobiles\Normal\Leviathan.cs" />
-    <Compile Include="Custom\Mobiles\Lich.cs" />
+    <Compile Include="Custom\Mobiles\Banished.cs" />
     <Compile Include="Mobiles\Normal\LichLord.cs" />
     <Compile Include="Mobiles\Normal\Lizardman.cs" />
     <Compile Include="Mobiles\Normal\Llama.cs" />
@@ -12952,8 +12958,6 @@
     <Compile Include="VitaNex\Core\VitaNex_Modules.cs" />
     <Compile Include="VitaNex\Core\VitaNex_Services.cs" />
     <Compile Include="Custom\Mobiles\NPC\Flavie.cs" />
-    <Compile Include="Custom\Mobiles\CarverShaman.cs" />
-    <Compile Include="Custom\Mobiles\Carver.cs" />
     <Compile Include="Custom\AutoDefend.cs" />
   </ItemGroup>
   <ItemGroup>

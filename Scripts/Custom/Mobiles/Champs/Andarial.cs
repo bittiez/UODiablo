@@ -15,8 +15,11 @@ namespace Server.Custom.Mobiles.Champs
             Body = 174;
             Name = "Andarial";
             BaseSoundID = 0x4B0;
-            MonsterLevel = 12;
-
+            
+            MonsterLevelNormal = 12;
+            MonsterLevelNightmare = 49;
+            MonsterLevelHell = 75;
+            
             SetStr(100, 200);
             SetDex(100, 150);
             SetInt(51, 100);

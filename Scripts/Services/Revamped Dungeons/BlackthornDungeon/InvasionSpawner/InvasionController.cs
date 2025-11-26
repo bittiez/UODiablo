@@ -120,7 +120,7 @@ namespace Server.Engines.Blackthorn
 		private Type[][] _SpawnTable =
 		{
             new Type[] { typeof(Dragon), typeof(Drake), typeof(GiantSerpent), typeof(Reptalon), typeof(Hydra) },
-            new Type[] { typeof(Lich), typeof(Wraith), typeof(Mummy), typeof(Zombie), typeof(SkeletalKnight), typeof(BoneKnight) },
+            new Type[] { typeof(Banished), typeof(Wraith), typeof(Mummy), typeof(Zombie), typeof(SkeletalKnight), typeof(BoneKnight) },
 			new Type[] { typeof(MudElemental), typeof(MoltenEarthElemental), typeof(DiseasedBloodElemental), typeof(GreaterAirElemental),
                          typeof(GreaterBloodElemental), typeof(GreaterEarthElemental), typeof(GreaterWaterElemental), typeof(ShameGreaterPoisonElemental),
                          typeof(StoneElemental) },

@@ -1,6 +1,4 @@
-using Server.Mobiles;
-
-namespace Server.Custom.Mobiles
+namespace Server.Mobiles
 {
     internal class Carver : BaseCreature
     {
@@ -15,8 +13,10 @@ namespace Server.Custom.Mobiles
             Body = RandomImpl.NextBool() ? 0xF5 : 0xFF;
             Hue = 1103;
 
-            MonsterLevel = 5;
-
+            MonsterLevelNormal = 5;
+            MonsterLevelNightmare = 38;
+            MonsterLevelHell = 68;
+            
             SetStr(36, 41);
             SetDex(25, 45);
             SetInt(15, 30);

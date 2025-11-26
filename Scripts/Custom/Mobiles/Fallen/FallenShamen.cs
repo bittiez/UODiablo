@@ -1,9 +1,9 @@
+using System;
 using Server.Items;
 using Server.Mobiles;
 using Server.Spells;
-using System;
 
-namespace Server.Custom.Mobiles
+namespace Server.Mobiles
 {
     internal class FallenShamen : BaseCreature
     {
@@ -16,8 +16,10 @@ namespace Server.Custom.Mobiles
             Name = "fallen shaman";
             Body = 253;
 
-            MonsterLevel = 2;
-
+            MonsterLevelNormal = 2;
+            MonsterLevelNightmare = 36;
+            MonsterLevelHell = 68;
+            
             SetStr(40, 80);
             SetDex(40, 75);
             SetInt(45, 150);

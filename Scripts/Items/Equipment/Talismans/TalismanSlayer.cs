@@ -63,7 +63,7 @@ namespace Server.Items
             m_Table[TalismanSlayerName.Mage] = new Type[]
                 {
                     typeof(EvilMage),           typeof(EvilMageLord),
-                    typeof(AncientLich),        typeof(Lich),
+                    typeof(AncientLich),        typeof(Banished),
                     typeof(LichLord),           typeof(SkeletalMage),
                     typeof(BoneMagi),           typeof(OrcishMage),
                     typeof(KhaldunZealot),      typeof(JukaMage),

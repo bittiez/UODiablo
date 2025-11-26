@@ -13,8 +13,10 @@ namespace Server.Mobiles
             Name = "dark hunter";
             Body = 0x191;
 
-            MonsterLevel = 2;
-
+            MonsterLevelNormal = 2;
+            MonsterLevelNightmare = 36;
+            MonsterLevelHell = 67;
+            
             SetStr(60, 75);
             SetDex(80, 95);
             SetInt(60, 75);

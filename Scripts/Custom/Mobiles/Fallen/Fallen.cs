@@ -1,6 +1,4 @@
-using Server.Mobiles;
-
-namespace Server.Custom.Mobiles
+namespace Server.Mobiles
 {
     internal class Fallen : BaseCreature
     {
@@ -14,8 +12,10 @@ namespace Server.Custom.Mobiles
             Name = "fallen";
             Body = RandomImpl.NextBool() ? 0xF5 : 0xFF;
 
-            MonsterLevel = 1;
-
+            MonsterLevelNormal = 1;
+            MonsterLevelNightmare = 36;
+            MonsterLevelHell = 67;
+            
             SetStr(36, 41);
             SetDex(25, 45);
             SetInt(15, 30);

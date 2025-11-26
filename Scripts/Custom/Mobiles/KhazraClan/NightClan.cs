@@ -2,19 +2,20 @@ using Server.Items;
 
 namespace Server.Mobiles
 {
-    [CorpseName("a kazra corpse")]
-    public class Kazra : BaseCreature
+    public class NightClan : BaseCreature
     {
         [Constructable]
-        public Kazra()
+        public NightClan()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
-            Name = "moon clan kazra";
+            Name = "night clan";
             Body = 138;
             BaseSoundID = 0x45A;
 
-            MonsterLevel = 4;
-
+            MonsterLevelNormal = 5;
+            MonsterLevelNightmare = 61;
+            MonsterLevelHell = 84;
+            
             SetStr(80, 95);
             SetDex(50, 75);
             SetInt(10, 20);
@@ -40,8 +41,7 @@ namespace Server.Mobiles
             Karma = -600;
         }
 
-        public Kazra(Serial serial)
-                   : base(serial)
+        public NightClan(Serial serial) : base(serial)
         {
         }
 

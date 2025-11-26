@@ -66,7 +66,7 @@ namespace Server.Engines.Doom
         private Type[] _MonsterList =
         {
             typeof(BoneDemon), typeof(SkeletalKnight), typeof(SkeletalMage), typeof(DarkGuardian), typeof(Devourer),
-            typeof(FleshGolem), typeof(Gibberling), typeof(AncientLich), typeof(Lich), typeof(LichLord),
+            typeof(FleshGolem), typeof(Gibberling), typeof(AncientLich), typeof(Banished), typeof(LichLord),
             typeof(Mummy), typeof(PatchworkSkeleton), typeof(Ravager), typeof(RestlessSoul), typeof(Dragon),
             typeof(SkeletalDragon), typeof(VampireBat), typeof(WailingBanshee), typeof(WandererOfTheVoid)
         };

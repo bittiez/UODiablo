@@ -1,9 +1,8 @@
-using Server.Items;
-using Server.Mobiles;
-using Server.Spells;
 using System;
+using Server.Items;
+using Server.Spells;
 
-namespace Server.Custom.Mobiles
+namespace Server.Mobiles
 {
     internal class CarverShaman : BaseCreature
     {
@@ -17,8 +16,10 @@ namespace Server.Custom.Mobiles
             Body = 253;
             Hue = 1103;
 
-            MonsterLevel = 6;
-
+            MonsterLevelNormal = 6;
+            MonsterLevelNightmare = 38;
+            MonsterLevelHell = 69;
+            
             SetStr(60, 100);
             SetDex(60, 95);
             SetInt(65, 170);

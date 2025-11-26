@@ -24,8 +24,10 @@ namespace Server.Custom.Mobiles
             Hue = 0;
             Female = true;
 
-            MonsterLevel = 10;
-
+            MonsterLevelNormal = 10;
+            MonsterLevelNightmare = 43;
+            MonsterLevelHell = 88;
+            
             SetStr(85, 95);
             SetDex(65, 120);
             SetInt(15, 30);

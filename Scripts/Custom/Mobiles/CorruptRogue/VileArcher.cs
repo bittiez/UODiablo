@@ -1,33 +1,31 @@
-using Server.Items;
 using System;
+using Server.Items;
+using Server.Mobiles;
 
 namespace Server.Mobiles
 {
-    public class TheCountess : BaseCreature
+    public class VileArcher : BaseCreature
     {
         [Constructable]
-        public TheCountess()
-            : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
+        public VileArcher()
+            : base(AIType.AI_Archer, FightMode.Closest, 10, 8, 0.2, 0.4)
         {
-            Name = "the countess";
+            Name = "vile archer";
             Body = 0x191;
+            Female = true;
 
-            MonsterLevelNormal = 11;
-            MonsterLevelNightmare = 45;
-            MonsterLevelHell = 82;
+            MonsterLevelNormal = 5;
+            MonsterLevelNightmare = 38;
+            MonsterLevelHell = 69;
 
-            SetStr(100, 150);
+            SetStr(50, 65);
             SetDex(80, 95);
             SetInt(60, 75);
 
-            SetHits(200, 300);
+            SetDamage(2, 3);
 
-            SetDamage(10, 23);
-
-            SetSkill(SkillName.Fencing, 66.0, 97.5);
-            SetSkill(SkillName.Macing, 65.0, 87.5);
             SetSkill(SkillName.MagicResist, 25.0, 47.5);
-            SetSkill(SkillName.Swords, 65.0, 87.5);
+            SetSkill(SkillName.Archery, 35.0, 60.5);
             SetSkill(SkillName.Tactics, 65.0, 87.5);
             SetSkill(SkillName.Wrestling, 15.0, 37.5);
 
@@ -37,18 +35,21 @@ namespace Server.Mobiles
             SetResistance(ResistanceType.Poison, 20, 30);
             SetResistance(ResistanceType.Energy, 30, 40);
 
-            Fame = 1000;
-            Karma = -1000;
+            Fame = 500;
+            Karma = -500;
 
             SetWearable(new ThighBoots(), Utility.RandomNeutralHue(), dropChance: 1);
             SetWearable(new FemaleStuddedChest(), dropChance: 1);
             SetWearable(new OrcHelm(), dropChance: 1);
-            SetWearable(new ChaosShield(), dropChance: 1);
 
             SetWearable((Item)Activator.CreateInstance(Utility.RandomList(_WeaponsList)), dropChance: 1);
+
+            Utility.AssignRandomHair(this);
+
+            PackItem(new Arrow(Utility.Random(40)));
         }
 
-        public TheCountess(Serial serial)
+        public VileArcher(Serial serial)
             : base(serial)
         {
         }
@@ -60,14 +61,13 @@ namespace Server.Mobiles
 
         private static readonly Type[] _WeaponsList =
         {
-            typeof(Scimitar)
+            typeof(Bow), typeof(CompositeBow)
         };
 
-        public override void GenerateLoot()
-        {
-            AddLoot(LootPack.Average);
-            AddLoot(LootPack.UOD_AllRunesForBosses);
-        }
+        //public override void GenerateLoot()
+        //{
+        //    AddLoot(LootPack.Average);
+        //}
 
         public override void Serialize(GenericWriter writer)
         {

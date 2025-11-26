@@ -41,7 +41,7 @@ namespace Server
 				new[]
 				{
 					typeof(AncientLich), typeof(Bogle), typeof(BoneKnight), typeof(BoneMagi), typeof(DarknightCreeper), typeof(Ghoul),
-					typeof(LadyOfTheSnow), typeof(Lich), typeof(LichLord), typeof(Mummy), typeof(RevenantLion), typeof(RottingCorpse),
+					typeof(LadyOfTheSnow), typeof(Banished), typeof(LichLord), typeof(Mummy), typeof(RevenantLion), typeof(RottingCorpse),
 					typeof(Shade), typeof(ShadowKnight), typeof(SkeletalDragon), typeof(SkeletalDrake), typeof(SkeletalKnight),
 					typeof(SkeletalMage), typeof(Skeleton), typeof(Spectre), typeof(Wraith), typeof(Zombie)
 				}

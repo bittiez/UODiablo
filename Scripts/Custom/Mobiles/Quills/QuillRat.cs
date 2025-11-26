@@ -11,8 +11,10 @@ namespace Server.Mobiles
             Name = "quill rat";
             Body = 0x20;
 
-            MonsterLevel = 3;
-
+            MonsterLevelNormal = 1;
+            MonsterLevelNightmare = 36;
+            MonsterLevelHell = 67;
+            
             SetStr(20, 50);
             SetDex(50, 75);
             SetInt(10, 30);

@@ -11,8 +11,10 @@ namespace Server.Mobiles
             Name = "tainted";
             Body = 241;
 
-            MonsterLevel = 11;
-
+            MonsterLevelNormal = 11;
+            MonsterLevelNightmare = 42;
+            MonsterLevelHell = 72;
+            
             SetStr(100, 150);
             SetDex(100, 150);
             SetInt(171, 195);

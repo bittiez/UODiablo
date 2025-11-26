@@ -42,7 +42,7 @@ namespace Server.Engines.Quests.Collector
             new ImageTypeInfo(9657, typeof(Scorpion), 65, 47),
             new ImageTypeInfo(9758, typeof(JukaMage), 75, 45),
             new ImageTypeInfo(9759, typeof(JukaWarrior), 75, 45),
-            new ImageTypeInfo(9636, typeof(Lich), 75, 45),
+            new ImageTypeInfo(9636, typeof(Banished), 75, 45),
             new ImageTypeInfo(9756, typeof(MeerMage), 75, 45),
             new ImageTypeInfo(9757, typeof(MeerWarrior), 75, 45),
             new ImageTypeInfo(9638, typeof(Mongbat), 70, 50),

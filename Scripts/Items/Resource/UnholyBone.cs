@@ -121,7 +121,7 @@ namespace Server.Items
                         spawn = new SkeletalKnight();
                         break;
                     case 10:
-                        spawn = new Lich();
+                        spawn = new Banished();
                         break;
                     case 11:
                         spawn = new LichLord();

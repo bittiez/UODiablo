@@ -178,7 +178,7 @@ namespace Server.Services.Virtues
 			if (m is BaseCreature && (((BaseCreature)m).Controlled || ((BaseCreature)m).Summoned))
 				return false;
 
-			return (m is Lich || m is Succubus || m is Daemon || m is EvilMage || m is EnslavedGargoyle ||
+			return (m is Banished || m is Succubus || m is Daemon || m is EvilMage || m is EnslavedGargoyle ||
 					m is GargoyleEnforcer);
 		}
 
