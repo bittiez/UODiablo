@@ -14,7 +14,7 @@ namespace Server.Mobiles
             Body = 3;
             BaseSoundID = 471;
 
-            MonsterLevel = RandomImpl.Next(3);
+            MonsterLevel = 1;
 
             SetStr(46, 70);
             SetDex(31, 50);

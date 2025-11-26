@@ -123,9 +123,9 @@ namespace Server.Custom.Gump
 
     internal class WaypointGumpDifficulty : Gumps.Gump
     {
-        const int BGWIDTH = 183, BGHEIGHT = 500;
+        const int BGWIDTH = 183, BGHEIGHT = 300;
 
-        const int START_BUTTON_Y = 10, BUTTON_HEIGHT = 25, BUTTON_SPACING = 3, BUTTON_WIDTH = 126, BUTTON_X = (BGWIDTH >> 1) - (BUTTON_WIDTH >> 1);
+        const int START_BUTTON_Y = 25, BUTTON_HEIGHT = 25, BUTTON_SPACING = 3, BUTTON_WIDTH = 126, BUTTON_X = (BGWIDTH >> 1) - (BUTTON_WIDTH >> 1);
 
         private Difficulty difficulty { get; }
         public PlayerMobile M { get; }
