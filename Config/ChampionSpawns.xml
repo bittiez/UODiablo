@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<championSystem>
+    <!-- Spawn elements define a champion spawn'
+    name        String  Displayed name of the spawn in Gumps
+    group       String  The spawn group the spawn belongs to. Optional. If present, only one spawn per group will
+                        automatically restart per group. If not present, the spawn will always be active and will
+                        allways automatically restart.
+    type        Enum    The type of spawn. These are defined in ChampionSpawnType.cs . Optional. If not given the
+                        type will be selected between the random spawn types and will randomize on every
+                        activation.
+    killsMod    Double  Multiplier applied to the number of mobiles needed to be killed to advance from one level
+                        to the next.
+    spawnMod    Double  Multiplier applied to the number of mobiles spawned at a time. Optional.
+	
+	waveMod     Double  Multiplier of max waves(normally 16)
+	
+    location    Element
+        x       Integer X location of the center of the spawn altar.
+        y       Integer Y location of the center of the spawn altar.
+        z       Integer Z location of the center of the spawn altar.
+        map     Enum    Map containing the spawn. This must match the map's name in MapDefinitions.cs .
+        radius  Integer The initial radius of the area of the champion spawn.
+    -->
+    <spawn name="AndyNormal" type="Andarial" killsMod="0.1" spawnMod="0.1" waveMod="0.2">
+        <location x="681" y="267" z="15" map="Dungeons" radius="20"/>
+    </spawn>
+</championSystem>

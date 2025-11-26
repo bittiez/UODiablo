@@ -1,0 +1,35 @@
+#X,Y,Z,Map,Dest X,Y,Z,Map,Back?,Notes
+2312,2745,0,Normal,2298,2316,0,Normal,TRUE,Tristram
+1009,2386,0,Normal,14,13,0,Dungeons,TRUE,Den of Evil
+1008,2386,0,Normal,15,13,0,Dungeons,TRUE,Den of Evil
+1947,2257,0,Normal,105,112,0,Dungeons,TRUE,The Cave
+1948,2257,0,Normal,106,112,0,Dungeons,TRUE,The Cave
+3651,1287,0,Normal,175,120,0,Dungeons,TRUE,Forgotten Tower
+2028,2028,0,Normal,87,39,12,Dungeons,TRUE,Crypt
+87,40,12,Dungeons,2028,2028,0,Normal,FALSE,Crypt
+87,38,12,Dungeons,2028,2028,0,Normal,FALSE,Crypt
+4236,1103,-18,Normal,42,235,12,Dungeons,TRUE,Barracks
+4237,1103,-18,Normal,42,234,12,Dungeons,TRUE,Barracks
+172,129,0,Dungeons,316,21,17,Dungeons,TRUE,Forgotten Tower
+308,142,-8,Dungeons,342,156,13,Dungeons,TRUE,Forgotten Tower
+342,155,13,Dungeons,308,142,-8,Dungeons,FALSE,Forgotten Tower
+342,157,13,Dungeons,308,142,-8,Dungeons,FALSE,Forgotten Tower
+457,98,-8,Dungeons,567,149,12,Dungeons,TRUE,Forgotten Tower
+456,98,-8,Dungeons,568,149,12,Dungeons,TRUE,Forgotten Tower
+566,149,12,Dungeons,456,98,-8,Dungeons,FALSE,Forgotten Tower
+109,308,-18,Dungeons,147,312,17,Dungeons,TRUE,Baracks->Jail
+148,312,17,Dungeons,109,308,-18,Dungeons,FALSE,Jail -> Baracks 2ndry
+196,276,-13,Dungeons,255,278,12,Dungeons,TRUE,Jail 1 -> Jail 2
+256,278,12,Dungeons,196,276,-13,Dungeons,FALSE,Jail 2 - Jail 1
+292,240,12,Dungeons,4209,1105,-18,Normal,TRUE,Jail 2 -> Inner Cloister
+293,240,12,Dungeons,4210,1105,-18,Normal,TRUE,Jail 2 -> Inner Cloister
+294,240,12,Dungeons,4210,1105,-18,Normal,FALSE,Jail 2 -> Inner Cloister
+450,245,6,Dungeons,313,341,17,Dungeons,TRUE,Catacombs 1 -> 2
+313,342,17,Dungeons,450,245,6,Dungeons,FALSE,Catacombs 2 -> 1
+442,359,-13,Dungeons,482,333,17,Dungeons,TRUE,Catacombs 2 -> 3
+482,334,17,Dungeons,442,359,-13,Dungeons,FALSE,Catacombs 3 -> 2
+521,382,-10,Dungeons,708,313,12,Dungeons,TRUE,Catacombs 3 -> 4
+522,382,-10,Dungeons,709,313,12,Dungeons,TRUE,Catacombs 3 -> 4
+710,313,12,Dungeons,521,382,-10,Dungeons,FALSE,Catacombs 4 -> 3
+711,313,12,Dungeons,521,382,-10,Dungeons,FALSE,Catacombs 4 -> 3
+707,313,12,Dungeons,521,382,-10,Dungeons,FALSE,Catacombs 4 -> 3
