@@ -48,8 +48,8 @@ namespace Server.Custom.Gump
             GenWP3Difficulty(new Point3D(1497, 2162, 0), Buttons.RogueEncampment);
             GenWP3Difficulty(new Point3D(1928, 2219, 0), Buttons.ColdPlains);
             GenWP3Difficulty(new Point3D(2266, 2710, 0), Buttons.StonyField);
-            GenWP3Difficulty(new Point3D(2927, 1738, 0), Buttons.DarkWood);
-            GenWP3Difficulty(new Point3D(3666, 1384, 0), Buttons.BlackMarsh);
+            GenWP3Difficulty(new Point3D(2569, 2275, 0), Buttons.DarkWood);
+            GenWP3Difficulty(new Point3D(2928, 1737, 0), Buttons.BlackMarsh);
             GenWP3Difficulty(new Point3D(4244, 1112, 0), Buttons.OuterCloister);
             GenWP3DungeonsDifficulty(new Point3D(194, 198, 0), Buttons.Jail);
             GenWP3Difficulty(new Point3D(4145, 1103, 0), Buttons.InnerCloister);
@@ -278,8 +278,8 @@ namespace Server.Custom.Gump
             new WayPointEntry(1499, 2164, 3, Map.Normal, "Rogue Encampment", Difficulty.Normal, Buttons.RogueEncampment),
             new WayPointEntry(1931, 2227, 3, Map.Normal, "Cold Plains", Difficulty.Normal, Buttons.ColdPlains),
             new WayPointEntry(2271, 2715, 3, Map.Normal, "Stony Field", Difficulty.Normal, Buttons.StonyField),
-            new WayPointEntry(2932, 1743, 3, Map.Normal, "Dark Wood", Difficulty.Normal, Buttons.DarkWood),
-            new WayPointEntry(3671, 1389, 3, Map.Normal, "Black Marsh", Difficulty.Normal, Buttons.BlackMarsh),
+            new WayPointEntry(2574, 2280, 3, Map.Normal, "Dark Wood", Difficulty.Normal, Buttons.DarkWood),
+            new WayPointEntry(2933, 1742, 3, Map.Normal, "Black Marsh", Difficulty.Normal, Buttons.BlackMarsh),
             new WayPointEntry(4249, 1117, 3, Map.Normal, "Outer Cloister", Difficulty.Normal, Buttons.OuterCloister),
             new WayPointEntry(199, 203, 3, Map.Dungeons, "Jail 1", Difficulty.Normal, Buttons.Jail),
             new WayPointEntry(4150, 1108, 3, Map.Normal, "Inner Cloister", Difficulty.Normal, Buttons.InnerCloister),
@@ -291,8 +291,8 @@ namespace Server.Custom.Gump
             new WayPointEntry(1499, 2164, 3, Map.Nightmare, "Rogue Encampment", Difficulty.Nightmare, Buttons.RogueEncampment),
             new WayPointEntry(1931, 2227, 3, Map.Nightmare, "Cold Plains", Difficulty.Nightmare, Buttons.ColdPlains),
             new WayPointEntry(2271, 2715, 3, Map.Nightmare, "Stony Field", Difficulty.Nightmare, Buttons.StonyField),
-            new WayPointEntry(2932, 1743, 3, Map.Nightmare, "Dark Wood", Difficulty.Nightmare, Buttons.DarkWood),
-            new WayPointEntry(3671, 1389, 3, Map.Nightmare, "Black Marsh", Difficulty.Nightmare, Buttons.BlackMarsh),
+            new WayPointEntry(2574, 2280, 3, Map.Nightmare, "Dark Wood", Difficulty.Nightmare, Buttons.DarkWood),
+            new WayPointEntry(2933, 1742, 3, Map.Nightmare, "Black Marsh", Difficulty.Nightmare, Buttons.BlackMarsh),
             new WayPointEntry(4249, 1117, 3, Map.Nightmare, "Outer Cloister", Difficulty.Nightmare, Buttons.OuterCloister),
             new WayPointEntry(199, 203, 3, Map.Dungeons, "Jail 1", Difficulty.Nightmare, Buttons.Jail),
             new WayPointEntry(4150, 1108, 3, Map.Nightmare, "Inner Cloister", Difficulty.Nightmare, Buttons.InnerCloister),
@@ -304,8 +304,8 @@ namespace Server.Custom.Gump
             new WayPointEntry(1499, 2164, 3, Map.Hell, "Rogue Encampment", Difficulty.Hell, Buttons.RogueEncampment),
             new WayPointEntry(1931, 2227, 3, Map.Hell, "Cold Plains", Difficulty.Hell, Buttons.ColdPlains),
             new WayPointEntry(2271, 2715, 3, Map.Hell, "Stony Field", Difficulty.Hell, Buttons.StonyField),
-            new WayPointEntry(2932, 1743, 3, Map.Hell, "Dark Wood", Difficulty.Hell, Buttons.DarkWood),
-            new WayPointEntry(3671, 1389, 3, Map.Hell, "Black Marsh", Difficulty.Hell, Buttons.BlackMarsh),
+            new WayPointEntry(2574, 2280, 3, Map.Hell, "Dark Wood", Difficulty.Hell, Buttons.DarkWood),
+            new WayPointEntry(2933, 1742, 3, Map.Hell, "Black Marsh", Difficulty.Hell, Buttons.BlackMarsh),
             new WayPointEntry(4249, 1117, 3, Map.Hell, "Outer Cloister", Difficulty.Hell, Buttons.OuterCloister),
             new WayPointEntry(199, 203, 3, Map.Dungeons, "Jail 1", Difficulty.Hell, Buttons.Jail),
             new WayPointEntry(4150, 1108, 3, Map.Hell, "Inner Cloister", Difficulty.Hell, Buttons.InnerCloister),
