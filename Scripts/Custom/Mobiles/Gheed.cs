@@ -131,9 +131,9 @@ namespace Server.Custom.Mobiles
         protected override void InitBuyInfo()
         {
             // Add the three gambling options
-            AddStock<UnidentifiedArmorToken>(ARMOR_PRICE, "Unidentified Armor", 999);
-            AddStock<UnidentifiedWeaponToken>(WEAPON_PRICE, "Unidentified Weapon", 999);
-            AddStock<UnidentifiedJewelryToken>(JEWELRY_PRICE, "Unidentified Jewelry", 999);
+            AddStock<UnidentifiedArmorToken>(ARMOR_PRICE, "Unidentified Armor", 666);
+            AddStock<UnidentifiedWeaponToken>(WEAPON_PRICE, "Unidentified Weapon", 666);
+            AddStock<UnidentifiedJewelryToken>(JEWELRY_PRICE, "Unidentified Jewelry", 666);
         }
 
         protected override void OnItemReceived(Mobile buyer, Item item, IBuyItemInfo buy)
