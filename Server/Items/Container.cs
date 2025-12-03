@@ -1935,6 +1935,12 @@ namespace Server.Items
 
         public virtual bool IsPublicContainer { get { return false; } }
 
+        /// <summary>
+        /// Determines if nested container contents should be automatically sent to the client.
+        /// Override this in derived classes (Corpse, BankBox) to return true.
+        /// </summary>
+        public virtual bool SendNestedContents { get { return false; } }
+
         public override void OnDelete()
         {
             base.OnDelete();
@@ -1980,6 +1986,44 @@ namespace Server.Items
 				foreach (var o in items)
                 {
 					to.Send(o.OPLPacket);
+                }
+            }
+
+            // Automatically send contents of nested containers for specific container types
+            if (SendNestedContents)
+            {
+                SendNestedContainerContents(to);
+            }
+        }
+
+        /// <summary>
+        /// Recursively sends the contents of all nested containers to the client.
+        /// </summary>
+        protected virtual void SendNestedContainerContents(Mobile to)
+        {
+            var items = Items;
+
+            foreach (var item in items)
+            {
+                if (item is Container container && !item.Deleted && to.CanSee(item))
+                {
+                    NetState ns = to.NetState;
+
+                    if (ns != null)
+                    {
+                        // Send the container's contents
+                        if (ns.ContainerGridLines)
+                        {
+                            to.Send(new ContainerContent6017(to, container));
+                        }
+                        else
+                        {
+                            to.Send(new ContainerContent(to, container));
+                        }
+
+                        // Recursively send nested containers
+                        container.SendNestedContainerContents(to);
+                    }
                 }
             }
         }

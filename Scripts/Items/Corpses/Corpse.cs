@@ -344,6 +344,8 @@ namespace Server.Items
 
         public override bool DisplayWeight { get { return false; } }
 
+        public override bool SendNestedContents { get { return true; } }
+
         public HairInfo Hair { get { return m_Hair; } }
         public FacialHairInfo FacialHair { get { return m_FacialHair; } }
 

@@ -21,6 +21,8 @@ namespace Server.Items
 
 		public override bool IsVirtualItem { get { return true; } }
 
+		public override bool SendNestedContents { get { return true; } }
+
 		public Mobile Owner { get { return m_Owner; } }
 
 		public bool Opened { get { return m_Open; } }
