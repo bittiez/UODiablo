@@ -12960,6 +12960,8 @@
     <Compile Include="VitaNex\Core\VitaNex_Services.cs" />
     <Compile Include="Custom\Mobiles\NPC\Flavie.cs" />
     <Compile Include="Custom\AutoDefend.cs" />
+    <Compile Include="Custom\LootBag\LootBag.cs" />
+    <Compile Include="Custom\LootBag\Loot.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Services\LootGeneration\RunicReforging\ReadMe.txt" />
